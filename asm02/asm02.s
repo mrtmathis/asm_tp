@@ -20,6 +20,12 @@ _start:
 	cmp byte [input + 1], 0x32
 	jne _error
 
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, msg
+	mov rdx, 5
+	syscall	
+
 	mov rax, 60
 	mov rdi, 0
 	syscall
